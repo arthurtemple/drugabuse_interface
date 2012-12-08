@@ -9,3 +9,9 @@
 .settings
 .classpath
 .project
+
+# Latex Files
+
+*.aux
+*.log
+*.backup
