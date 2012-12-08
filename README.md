@@ -10,5 +10,5 @@ This project consists in four user interfaces:
 * Mobile
 
 A placeholder backend service can actually be found here:
-  http://http://drugabuse.herokuapp.com/
+  http://drugabuse.herokuapp.com/
 
