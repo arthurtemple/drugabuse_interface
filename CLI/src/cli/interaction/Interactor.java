@@ -59,7 +59,7 @@ public class Interactor {
 	private void actMenu(int item) {
 		switch(item){
 		case 1:
-			o.print("Please write your request as you feel it. There are no special keywords, however it is important to specify which drug is causing you trouble.");
+			o.print("Please write your request as you feel it. There is no special keyword, however it is important to specify which drug is causing you trouble.");
 			String request = "";
 			try {
 				request = i.readLine();
