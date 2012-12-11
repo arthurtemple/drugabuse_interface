@@ -8,12 +8,69 @@
 % \renewcommand{\headrulewidth}{0pt} % no line in header area
 \fancyfoot{} % clear all footer fields
 % \fancyhead[LE,RO]{\thepage}           % page number in "outer" position of footer line
-\fancyhead[RE,LO]{\emph{User Interface Construction - Group assignment report - Olivier Cl\'{e}ro, Maciek \'{S}lifirski, Arthur Templ\'{e}} } % other info in "inner" position of footer line
+\fancyhead[RE,LO]{\emph{UI Construction - Group assignment report - Olivier Cl\'{e}ro, Maciek \'{S}lifirski, Arthur Templ\'{e}} } % other info in "inner" position of footer line
+
+\title{T-110.5241 - Report for the group assignment}
 
 \begin{document}
 
-\section*{Command-Line Interface}
+\maketitle
+
+\section*{Introduction}
+
+The group is formed by Maciek \'{S}lifirski, Olivier Cl\'{e}ro and Arthur Templ\'{e}.
+
+We chose topic number 6: \textbf{Anonymous substance abuse counseling e-service}.
+
+\section*{The service - Anonymous substance abuse counseling e-service}
+
+The service is meant to provide information to people in difficulty regarding drug abuse.
+The aim is to give:
+\begin{enumerate}
+ \item proper answers to people's drug problems
+ \item easy access to common services (like the website, emergency calls, ...)
+\end{enumerate}
+
+For this purpose, four user interfaces are provided:
+
+\begin{itemize}
+ \item Web
+ \item Mobile
+ \item Desktop
+ \item Command Line
+\end{itemize}
+
+Furthermore, a placeholder backend server is also incldued, which provides PDF files according to users' requests. Basically, it searches in the request (which is a text string) for drug names, and crafts a proper PDF file accordingly to the identified drugs.
+
+\section*{Web Interface}
+
+\section*{Mobile Interface}
+
+\section*{Desktop Interface}
+
+\section*{Command Line Interface}
+
+\subsection*{Overview}
+
+The Command Line Interface (CLI) version of this project may be considered a reduced port of the Desktop Interface version for CLI, towards users not desiring to use any graphical environment. Functionalities are stripped down to essential. User is able to open a browser to the web interface, to an information website and to send a request to the server and get the informative PDF file he requested. Furthermore, the CLI allows opening this PDF file with default PDF reader.
+
+\subsection*{Advantages and issues from the CLI}
 
 
+
+\subsection*{Technical choices}
+
+
+
+\subsection*{Outcomes}
+
+\section*{Conclusion}
+
+\begin{thebibliography}{9}
+
+\bibitem{foobar2000}
+  Bar, F. and Qux, B. 2000. \emph{how do you turn this on}.	% May actually use APA-style citing, as provided by Google Scholar for instance
+  
+\end{thebibliography}
 
 \end{document}
