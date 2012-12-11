@@ -56,13 +56,29 @@ The Command Line Interface (CLI) version of this project may be considered a red
 
 \subsection*{Advantages and issues from the CLI}
 
+A important point in the design of this interface, especially regarding the very nature of targeted users, is ease-of-use. Every action has to be handed out in a simple way, with no hassle. For the sake of ease-of-use, every interaction the user may have to do is unequivocally written on screen. There is no hidden command, and the state of the program is visible (for instance when a PDF file has been downloaded).
 
+Regarding control, which is somewhat considered important for CLI users, the principle of total clarity is once again put forward. Every interaction with the File System or the system itself must be displayed on screen. As a matter of fact, address of the download directory is explicited. Moreover, every interaction with an external software (PDF reader, web browser) is announced by the program.
+
+Multi-tasking is not usual on CLI, thus multi-tasking operations here are handled by external software. As explained previously, every departure from the terminal is explicited, so there should be no surprise when using the interface.
+
+Of course, speed is an inner quality of this interface as no graphical element is displayed, nor are fancy features. The bare minimum of functionalities of this piece of software grants the system all freedom to deliver full speed to the interface, and resource consumption is made anecdotal.
+
+However, remote access to the application, which could be expected from a CLI program, is not implemented here. The reason behind is quite straightforward: most results from this software are to be displayed on graphical interfaces. Thus some technologies like X forwarding or tunneling would come into play, which would put the application out of its objective of simplicity towards fragilized users.
 
 \subsection*{Technical choices}
 
+The CLI interface for the Anonymous substance abuse counseling e-service is completely written in Java. The major reason behind this choice is that the development team shows great proficiency in this language and that only a small portion of development time has to be dedicated to this interface. Furthermore, deployment and testing of this interface are really made easy by the multi-platform aspect of the Java language.
 
+Nevertheless, a drawback from the use of Java is that there is no real way to ``refresh'' the screen, that is to say to empty existing lines of text and replace them with other ones. The hack to give a similar feeling is to write some empty lines in order to make former text disappear - CLI being a drop-down text interface. This is quite unclean, of course, however it also offers a kind of \emph{history} functionality as a user may scroll up in order to see old messages and states from the program.
+
+The ability to choose in which folder PDF downloads should come may have been offered to the users. This required a dash of reflection from the development team, but it was eventually decided that the user should not have this choice in the CLI interface. This in order to get the simplest interface possible, with no fancy feature and no extra.
+
+Finally, possibility is left for enthusiast programmers to embed this interface into their own Java software, may it be graphical or not. Indeed, input and output streams are specified programmatically when the CLI interface is launched. As a result, fellow software developers only have to specify to and from which streams they want the interface to interact.
 
 \subsection*{Outcomes}
+
+The CLI offers a drastically simpler way to consider the interface of the Anonymous substance abuse counseling e-service. The really small amount of features provided as well as the inherent speed of the interface makes a drastically specific interface, reserved for peculiar needs and full-speed connoisseurs.
 
 \section*{Conclusion}
 
