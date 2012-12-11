@@ -2,7 +2,9 @@ package cli.interaction;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.PrintStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -22,11 +24,11 @@ public class Interactor {
 	private BufferedReader i;
 	private String lastDownloadName;
 
-	public Interactor(){
+	public Interactor(InputStream in, PrintStream out){
 		super();
 		this.state = InteractionState.MENU;
-		this.o = new Printer();
-		this.i = new BufferedReader(new InputStreamReader(System.in));
+		this.o = new Printer(out);
+		this.i = new BufferedReader(new InputStreamReader(in));
 		this.lastDownloadName = "";
 	}
 

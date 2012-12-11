@@ -2,6 +2,8 @@ package cli.io;
 
 import java.io.PrintStream;
 
+import cli.interaction.Browser;
+
 public class Printer {
 
 	private PrintStream out;
@@ -14,6 +16,7 @@ public class Printer {
 	public Printer(PrintStream ps){
 		super();
 		this.out = ps;
+		Browser.setPrinter(this);
 	}
 
 	public void print(String s) {

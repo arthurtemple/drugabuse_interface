@@ -8,14 +8,20 @@ import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URL;
 
+import cli.io.Printer;
+
 public class Browser {
 
 	private static Browser INSTANCE;
-	
-	private static final String TEMP_DIR = "TEMP";
+	private static Printer PRINTER;
+	private final String TEMP_DIR = "TEMP";
 
 	private Browser(){
 		new File(TEMP_DIR).mkdirs();
+	}
+	
+	public static void setPrinter(Printer p){
+		PRINTER = p;
 	}
 
 	public static Browser getInstance(){
@@ -26,7 +32,7 @@ public class Browser {
 
 	public void open(String url){
 		if(!java.awt.Desktop.isDesktopSupported()) {
-			System.err.println("Your computer needs at least Java 6 to open a browser.\nPlease try to do it yourself by opening your everyday browser and typing following line into the URL bar:\n"+url.toString());
+			PRINTER.print("Your computer needs at least Java 6 to open a browser.\nPlease try to do it yourself by opening your everyday browser and typing following line into the URL bar:\n"+url.toString());
 		}
 		try {
 			java.awt.Desktop.getDesktop().browse(URI.create(url));
@@ -36,7 +42,7 @@ public class Browser {
 
 	public void openFile(String fileName){
 		if(!java.awt.Desktop.isDesktopSupported()) {
-			System.err.println("Your computer needs at least Java 6 to open a file.\nPlease try to do it yourself by opening following file:\n"+fileName);
+			PRINTER.print("Your computer needs at least Java 6 to open a file.\nPlease try to do it yourself by opening following file:\n"+fileName);
 		}
 		try {
 			java.awt.Desktop.getDesktop().open(new File(fileName));

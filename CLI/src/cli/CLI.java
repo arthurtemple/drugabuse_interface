@@ -10,7 +10,7 @@ public class CLI {
 	 * @throws Exception 
 	 */
 	public static void main(String[] args) throws Exception{
-		Interactor interactor = new Interactor();
+		Interactor interactor = new Interactor(System.in, System.out);
 		interactor.interact();
 	}
 
