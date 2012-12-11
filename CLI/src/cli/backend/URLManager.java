@@ -1,8 +1,6 @@
 package cli.backend;
 
 import java.io.UnsupportedEncodingException;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.net.URLEncoder;
 import java.util.HashMap;
 
@@ -17,7 +15,7 @@ public class URLManager {
 
 		urlMap.put("emergency", "http://www.bt.cdc.gov/");
 		urlMap.put("service", "http://drugabuse.herokuapp.com/info/show?request=");
-		urlMap.put("web", "PUT HERE URL OF WEB INTERFACE");
+		urlMap.put("web", "../../Web/index.html");
 
 	}
 
@@ -27,10 +25,10 @@ public class URLManager {
 		return INSTANCE;
 	}
 
-	public URL getURL(String s, String request){
+	public String getURL(String s, String request){
 		try {
-			return new URL(urlMap.get(s) + (request == null ? "" : URLEncoder.encode(request, "UTF-8")));
-		} catch (MalformedURLException | UnsupportedEncodingException e) {
+			return urlMap.get(s) + (request == null ? "" : URLEncoder.encode(request, "UTF-8"));
+		} catch (UnsupportedEncodingException e) {
 			return null;
 		}
 	}

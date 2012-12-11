@@ -3,6 +3,8 @@ package cli.interaction;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import cli.backend.URLManager;
 import cli.io.Printer;
@@ -29,10 +31,12 @@ public class Interactor {
 	}
 
 	public void interact() throws IOException{
-		while(this.state != InteractionState.EXIT){
+		while(true){
 			o.clear();
 			choices();
 			act(i.readLine());
+			if(this.state == InteractionState.EXIT)
+				return;
 		}
 	}
 
@@ -67,15 +71,22 @@ public class Interactor {
 				o.print("A problem occured while computing your request. Would you please retry?");
 				return;
 			}
-			this.lastDownloadName = Browser.getInstance().download(URLManager.getInstance().getURL("service", request));
+			try {
+				this.lastDownloadName = Browser.getInstance().download(new URL(URLManager.getInstance().getURL("service", request)));
+			} catch (MalformedURLException e) {
+			}
 			if(this.lastDownloadName != null)
 				this.state = InteractionState.REQUEST;
 			break;
 		case 2:
-			Browser.getInstance().open(URLManager.getInstance().getURL("web",""));
+			o.print("Please wait while your browser is opening...");
+			Browser.getInstance().open(URLManager.getInstance().getURL("web",null));
+			sleep(3000);
 			break;
 		case 3:
-			Browser.getInstance().open(URLManager.getInstance().getURL("emergency",""));
+			o.print("Please wait while your browser is opening...");
+			Browser.getInstance().open(URLManager.getInstance().getURL("emergency",null));
+			sleep(3000);
 			break;
 		case 4:
 			this.state = InteractionState.EXIT;
@@ -89,7 +100,9 @@ public class Interactor {
 	private void actRequest(int item) {
 		switch(item){
 		case 1:
+			o.print("Please wait while the downloaded file is opening...");
 			Browser.getInstance().openFile(this.lastDownloadName);
+			sleep(6000);
 			break;
 		case 2:
 			this.state = InteractionState.MENU;
@@ -100,6 +113,13 @@ public class Interactor {
 		default:
 			o.print("You chose an incorrect option. Please choose a number between 1 and 3.");
 			break;
+		}
+	}
+	
+	private void sleep(long milliseconds){
+		try {
+			Thread.sleep(milliseconds);
+		} catch (InterruptedException e) {
 		}
 	}
 

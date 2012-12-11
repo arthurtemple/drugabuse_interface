@@ -5,7 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
-import java.net.URISyntaxException;
+import java.net.URI;
 import java.net.URL;
 
 public class Browser {
@@ -24,13 +24,13 @@ public class Browser {
 		return INSTANCE;
 	}
 
-	public void open(URL url){
+	public void open(String url){
 		if(!java.awt.Desktop.isDesktopSupported()) {
 			System.err.println("Your computer needs at least Java 6 to open a browser.\nPlease try to do it yourself by opening your everyday browser and typing following line into the URL bar:\n"+url.toString());
 		}
 		try {
-			java.awt.Desktop.getDesktop().browse(url.toURI());
-		} catch (IOException | URISyntaxException e) {
+			java.awt.Desktop.getDesktop().browse(URI.create(url));
+		} catch (IOException e) {
 		}
 	}
 
