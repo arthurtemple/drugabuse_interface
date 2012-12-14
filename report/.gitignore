@@ -1,0 +1,9 @@
+
+# Latex Files
+
+*.aux
+*.log
+*.backup
+*.out
+*.gz
+

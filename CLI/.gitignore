@@ -1,0 +1,12 @@
+
+# Eclipse Files
+.settings
+.classpath
+.project
+
+# Binaries folder
+bin
+
+# Custom folder
+TEMP
+

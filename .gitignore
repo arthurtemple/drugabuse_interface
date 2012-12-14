@@ -1,18 +1,22 @@
-*.class
+############
+## Windows
+############
 
-# Package Files #
-*.jar
-*.war
-*.ear
+# Windows image file caches
+Thumbs.db
 
-# Eclipse Files
-.settings
-.classpath
-.project
+# Folder config file
+Desktop.ini
 
-# Latex Files
+###########
+## Linux
+###########
 
-*.aux
-*.log
-*.backup
-*.pdf
+# Get rid of tedious temp files
+*~
+
+#############
+# Mac crap
+#############
+.DS_Store
+
