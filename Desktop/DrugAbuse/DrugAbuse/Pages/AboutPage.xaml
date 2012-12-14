@@ -1,0 +1,36 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="DrugAbuse.HelpPage"
+	x:Name="UserControl">
+
+	<Grid x:Name="LayoutRoot">
+		<StackPanel Orientation="Vertical">
+			<TextBlock Style="{DynamicResource TextBlock-SubTitle}"
+				Foreground="{DynamicResource GUIColor-Default}"
+				Text="Trustworthy database"></TextBlock>	
+			<TextBlock Style="{DynamicResource TextBlock-Default}"
+				x:Name="Text_Web"
+				Text="No text"
+				TextWrapping="WrapWithOverflow"></TextBlock>	
+			
+			<TextBlock Style="{DynamicResource TextBlock-SubTitle}"
+				Foreground="{DynamicResource GUIColor-Default}"
+				Text="Anonymity"></TextBlock>	
+			<TextBlock Style="{DynamicResource TextBlock-Default}"
+				x:Name="Text_About"
+				Text="No text"
+				TextWrapping="WrapWithOverflow"></TextBlock>
+            <TextBlock Style="{DynamicResource TextBlock-SubTitle}"
+				Foreground="{DynamicResource GUIColor-Default}"
+				Text="Developers"></TextBlock>
+            <TextBlock Style="{DynamicResource TextBlock-Default}"
+				x:Name="Text_Dev"
+				Text="No text"
+				TextWrapping="WrapWithOverflow"></TextBlock>
+        </StackPanel>
+	</Grid>
+</UserControl>

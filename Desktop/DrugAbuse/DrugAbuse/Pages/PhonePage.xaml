@@ -1,0 +1,36 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="DrugAbuse.PhonePage"
+	x:Name="UserControl"
+	Focusable="False"
+	>
+
+	<Grid x:Name="LayoutRoot">
+		<StackPanel Orientation="Vertical" Margin="0,0,30,0">
+			<TextBlock Text="Local phone numbers to get help" Style="{DynamicResource TextBlock-SubTitle}" Margin="0,0,0,20"></TextBlock>
+			
+			<Grid Margin="0,0,0,10" Background="{DynamicResource GUIColor-BackgroundHighlight}">
+				<StackPanel Orientation="Vertical" Margin="0,0,0,0" Width="400" VerticalAlignment="Center" HorizontalAlignment="Left">
+					<TextBlock Text="Drug Emergency" Style="{DynamicResource TextBlock-Default}" Foreground="{DynamicResource GUIColor-Default}"></TextBlock>
+					<TextBlock Text="1-866-643-6144" Style="{DynamicResource TextBlock-Default}"></TextBlock>
+				</StackPanel>
+				<Button Style="{DynamicResource ButtonSkype}" Content="Call (Skype)" Height="100" HorizontalAlignment="Right"></Button>
+			</Grid>
+			
+			
+			<Grid Margin="0,0,0,10" Background="{DynamicResource GUIColor-BackgroundHighlight}">
+				<StackPanel Orientation="Vertical" Margin="0,0,0,0" Width="400" VerticalAlignment="Center" HorizontalAlignment="Left">
+					<TextBlock Text="Helpline" Style="{DynamicResource TextBlock-Default}" Foreground="{DynamicResource GUIColor-Default}"></TextBlock>
+					<TextBlock Text="0800-776600" Style="{DynamicResource TextBlock-Default}"></TextBlock>
+				</StackPanel>
+				<Button Style="{DynamicResource ButtonSkype}" Content="Call (Skype)" Height="100" HorizontalAlignment="Right"></Button>
+			</Grid>
+
+
+		</StackPanel>
+	</Grid>
+</UserControl>

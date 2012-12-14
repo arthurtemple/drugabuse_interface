@@ -1,0 +1,48 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	xmlns:local="clr-namespace:DrugAbuse"
+	x:Class="DrugAbuse.HomePage"
+	x:Name="Page"
+	FlowDirection="LeftToRight"
+	Focusable="False">
+
+
+		<StackPanel Orientation="Vertical">
+			<StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+				<TextBlock Style="{DynamicResource TextBlock-SubTitle}" Text="Do you need help?" HorizontalAlignment="Left" Margin="0,0,0,20"></TextBlock>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="0" VerticalAlignment="Top" Margin="0">
+					<TextBox x:Name="UserRequest" Tag="Search for help" Height="48" Width="300"
+						Style="{DynamicResource TextBoxGUI}" HorizontalAlignment="Center" Margin="0,0,20,0"
+						KeyDown="OnKeyDownHandler"></TextBox>
+					<Button Style="{DynamicResource ButtonMagnifyingGlass}" Content="Ok" Height="49" Width="100" HorizontalAlignment="Center"
+						Click="OnClickResult" Margin="0,0,20,0"></Button>
+					<Viewbox Height="49">
+						<local:CircularProgressBar x:Name="progressBar"></local:CircularProgressBar>
+					</Viewbox>
+				</StackPanel>
+				<TextBlock x:Name="Feedback" Text="Please enter something" Style="{DynamicResource TextBlock-Default}" Margin="0,0,0,10"></TextBlock>
+				<CheckBox 
+					x:Name="CheckBoxKeep"
+					Content="Keep searches in history (crypted)" Margin="0,0,0,50"
+					FontFamily="{DynamicResource DefaultFont}" Foreground="White"
+					FontSize="{DynamicResource FontSize-Default}" Style="{DynamicResource CheckBoxStyle1}"
+					Checked="CheckBox_Checked"
+					Unchecked="CheckBox_Unchecked"/>
+				
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Margin="0,0,30,0" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Bottom">
+				<Button x:Name="Button_Update" Content="Previous" Height="100" Style="{DynamicResource ButtonDownload}" BorderThickness="0" Margin="0,0,40,0"
+				Click="OnClickPrevious"/>
+				<Button x:Name="Button_Phone" Content="Phone" Height="100" Style="{DynamicResource ButtonPhone}" BorderThickness="0" Margin="0,0,40,0"
+				Click="OnClickPhone"/>
+				<Button x:Name="Button_Help" Content="About" Height="100" Style="{DynamicResource ButtonHelp}" BorderThickness="0" Margin="0,0,0,0"
+				Click="OnClickHelp"/>
+
+			</StackPanel>
+		
+	</StackPanel>
+</UserControl>

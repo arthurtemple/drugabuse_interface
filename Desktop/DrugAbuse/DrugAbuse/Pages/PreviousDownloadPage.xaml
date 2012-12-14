@@ -1,0 +1,55 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+	xmlns:behaviours="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions"
+	xmlns:local="clr-namespace:DrugAbuse"
+	mc:Ignorable="d"
+	x:Class="DrugAbuse.PreviousDownloadPage"
+	x:Name="UserControl"
+	>
+
+	<UserControl.DataContext>
+		<local:PdfViewModel/>
+	</UserControl.DataContext>
+
+	<Grid x:Name="LayoutRoot" VerticalAlignment="Top">
+		<StackPanel Orientation="Vertical" Width="500" HorizontalAlignment="Center">
+			<ListBox x:Name="listOfFiles"
+					 Margin="0" HorizontalAlignment="Left"
+			         VerticalAlignment="Top" Width="500" Height="230"
+					 FontSize="{DynamicResource FontSize-Default}"
+					 Foreground="{DynamicResource GUIColor-ShadowGrey}"
+					 FontFamily="{DynamicResource DefaultFont}" Style="{DynamicResource ListBoxStyle1}">
+				
+				<ListBox.ItemContainerStyle>
+					
+		            <Style TargetType="{x:Type ListBoxItem}">
+						<Style.Resources>
+						    <!-- Background of selected item when focused -->
+						    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}"
+						                     Color="{DynamicResource GUIColor-Blue}"/>
+						</Style.Resources> 
+		            </Style>
+					
+		        </ListBox.ItemContainerStyle>
+			</ListBox>
+			
+			<StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Right" >
+				<Button Content="Delete all" Style="{DynamicResource ButtonDelete}" Height="100" Margin="0,0,160,0"
+				Click="OnClickDelete"></Button>
+
+				<Button Content="Save as..." Style="{DynamicResource ButtonSave}" Height="100" Margin="0,0,40,0"
+				Click="OnClickSavePdf"></Button>
+				<Button Content="Print" Height="100"  Style="{DynamicResource ButtonPrint}"
+				Click="OnClickPrintPdf"></Button>
+
+			</StackPanel>
+			
+
+		</StackPanel>
+		
+	</Grid>
+</UserControl>

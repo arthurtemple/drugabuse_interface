@@ -1,0 +1,22 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="DrugAbuse.NavigationPanel"
+	x:Name="Page"
+	FlowDirection="LeftToRight"
+	Width="Auto"
+	Height="Auto">
+
+	<Grid x:Name="LayoutRoot">
+		<StackPanel>
+		
+			<!-- Navigation Buttons -->
+			<Viewbox Height="Auto" HorizontalAlignment="Left" Margin="0,0,0,0" >
+			<StackPanel x:Name="NavigationButtons"  Orientation="Vertical">
+				<Button x:Name="Button_Back" Style="{DynamicResource ButtonArrowLeft}" Margin="0,0,0,0"
+                        Click="OnClickBackwards" TouchEnter="OnClickBackwards"/>
+			</StackPanel>
+			</Viewbox>
+		</StackPanel>
+	</Grid>
+</UserControl>
