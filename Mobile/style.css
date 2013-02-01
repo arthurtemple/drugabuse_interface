@@ -1,0 +1,116 @@
+html { margin: 0; }
+body {
+	height: 100%;
+	margin: 0; 
+	padding: 0;
+}
+
+#core_container {
+	width: 100%;
+	background: url(images/pattern.png) repeat;
+	margin: 0; 
+	padding: 0;
+}
+
+#main{
+	width: 95%;
+	margin: auto;
+	background-image: url(images/stripes.png);
+	background-size: 100%;
+	border-style:solid;
+	border-width:3px;
+	border-color:#98bf21;
+	opacity:0.9;
+	border-radius:10px;
+	box-shadow: 5px 5px 5px #111111;
+}
+
+#empty{
+	margin: auto;
+	height: 5px;
+}
+
+#header {
+	height: 140px;
+	width: 100%;
+}
+#headerwrapper {
+	margin: 0 auto;
+	padding: 15px 0;
+	width: 95%;
+}
+
+#headerwrapper h2 {
+	display: inline;
+	font-family: 'Armata', sans-serif;
+	font-weight: normal;
+	color: #ABE1B9;
+	font-size: 25px;
+}
+
+#problem {
+	margin: 0;
+	width: 90%;
+	opacity: 0.9;
+	font-family: 'Armata', sans-serif;
+}
+
+textarea#problem_font {
+	width: 95%;
+	height: 110px;
+	font-family: 'Armata', sans-serif;
+	font-size: 14px;
+	border: 3px solid #cccccc;
+	padding: 10px;
+	resize: none;
+}
+
+.sendbutton{
+	font-family: 'Armata', sans-serif;
+	font-weight:bold;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	width: 85%;
+	height: 40px;
+	background: #8FBC8F;
+	opacity: 0.8;
+}
+.sendbutton:hover{
+	opacity: 1;
+}
+
+#download {
+	margin-top: 30px;
+	width: 90%;
+	border: 3px solid #cccccc;
+	background: #FFFFC0;
+	opacity: 0.9;
+}
+
+#phones {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	height: 100px;
+	width: 90%;
+	border: 3px solid #cccccc;
+	background: #22000A;
+	opacity: 0.9
+}
+#download td{
+	font-family: 'Armata', sans-serif;
+	font-size: 14px;
+	padding: 10px 15px;
+}
+
+#phones td{
+	font-family: 'Text Me One', sans-serif;
+	font-size: 16px;
+	font-weight: bold; 
+	color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+p {
+	color: #46B4CF;
+}
