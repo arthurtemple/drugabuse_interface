@@ -1,0 +1,1 @@
+To start website open index.html file in mobile browser.
