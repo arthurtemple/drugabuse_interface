@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Anonymous help for you</title>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<!-- fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Armata' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Text+Me+One' rel='stylesheet' type='text/css'>
+		<!-- style sheet -->
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!-- jquery -->
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				
+				$('#download').hide();
+				$('#phones').hide();
+			
+				// add submit handler for problem input
+				$("#content_wrapper").submit(function(e) {
+					switchToResultsInterface();
+				});
+			});
+			
+			function switchToResultsInterface() {
+
+				$("#download").show();
+				$("#phones").show();
+				
+			}
+			
+		</script>
+		<!-- site scripts -->
+
+	</head>
+	<body>
+	<div id="core_container">
+		<div id="empty"></div>
+		<div id="main">
+			
+			<div id="header">
+				<div id="headerwrapper">
+					<center><img src="images/DrugAbuse.png" height='50'><br><h2>We can help you anonymously!</h2></center>
+				</div>
+			</div>
+			<div id="content_wrapper">
+			<center>
+				<form id="problem" action="http://drugabuse.herokuapp.com/info/show?request=">
+				<textarea name="request" form="problem" id="problem_font" autofocus>Please describe your problem... Text will be encrypted to keep your anonymity.</textarea><br>
+				<input type="submit" class="sendbutton">
+				</form>
+			
+			<div id="download">
+				<table>
+					<tr>
+					<td>We are sending you PDF File from our <u>100% secure</u> database. You will find there necessary information about your problem.</td>
+					<td><img src="images/PDF.png" height='50'></td>
+					</tr>
+				</table>
+			</div>
+			<div id="phones">
+				<table>
+					<tr><td><p>Drug Emergency</p> 1-866-643-6144</td>
+					<td><p>Helpline</p> 0800-776600</td></tr>
+				</table>
+			</div>
+			</center>
+			</div>
+			
+			
+		</div>
+		<div id="empty"></div>
+	</div>
+	</body>
+</html>
