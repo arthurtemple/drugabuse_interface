@@ -76,16 +76,45 @@ Furthermore, a placeholder backend server is also incldued, which provides PDF f
 %%%%%%%%%%%%%%%%%%%%%% WEB %%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Web Interface}
-Maciek's part.
 
 \subsection*{Overview}
+Web User Interface version of this project may be considered as alternative and widely available version of the Desktop Interface. It contains almost the same functionality as Desktop Interface, except search history. Main functionality is based on command line input, where users can describe their problems and as a result receive PDF ﬁle from server. File can be stored in user default location or displayed in new tab using default PDF reader - it depends on browser settings.
+
+\subsection*{Advantages and issues from Web User Interface}
+Main target was to create interface, which is really easy to use, due to target group of users. Drug addiction can touch people regardless their age and cause health problems (mental or physical), which often decrease their ability to use advanced functions. Moreover, interface is also designed for people looking for information about help for their friends or family. The only action that user is expected to do is describe nature of the problem - drug types are automatically recognized from the input. There are no hidden functions or options and all actions are visible for the user (e.g. when PDF file is ready to download). Also to receive answer for the request, no contact information are needed. User can retrieve file directly from server and in addition helpline numbers are displayed. There is no interaction with user's file system - all files can be downloaded only if users will accept it. 
+Colors of the layout are toned to give the impression of serenity - no sharp or drawing attention ones. Our idea was to create website that looks like quiet, private room, where user can ask for help without spectators. Moreover website does not contain any special graphical effects, transitions or even advertisements in order to minimize response time. All visual effects are using browser's native functions, which also makes it compatible with every computer.
+
+\subsection*{Technical choices}
+
+Web User Interface have been developed in Bluefish editor with HTML5, JavaScript, jQuery and CSS3. These languages used together are powerful tool for creating websites that can act like applications. The reason behind using this technology is compatibility with all browsers and all operating system, so with our application we can gain huge group of users. Moreover, developing application in this environment is quick and easy, because all necessary knowledge is available in W3Schools tutorials. Core of the website is based on HTML5 DOM.  JavaScript with jQuery library handles displaying DOM objects on the website and process request to server. Layout is written in CSS3, which enables developers to change it, whenever they want - e.g. colors or fonts may depend on the season. Another reason of this choice is no need to use external plugins to display interface. It decreases loading time and amount of used resources.
+
+\subsection*{Outcomes}
+Web Interface is designed for users that don't want to install any application or want to use it in any place. Also using browser may provide more anonymity, especially using incognito windows - in that case there is high probability that nobody will find out information about user problems. Web Interface is equivalent of desktop interface. It also provides simple interaction with minimum demanded steps to receive answer. Main target was to create website that is simple, clear and easy to use for everyone.
+
 
 %%%%%%%%%%%%%%%%%%%%% MOBILE %%%%%%%%%%%%%%%%%%%%%
 
 \section*{Mobile Interface}
-Maciek's part.
 
 \subsection*{Overview}
+
+Mobile User Interface version of this project may be considered as alternative version of the Web User Interface, designed for small devices like mobile phones, netbooks or tablets. It contains the same functionality as Web User Interface and is created according to RWD recommendations. Main functionality is based on command line input, where users can describe their problems and as a result receive PDF ﬁle from server. File can be stored in user default location or displayed in new tab using default PDF reader - it depends on browser settings. 
+
+\subsection*{Advantages and issues from Mobile User Interface}
+
+Main target was to create interface, which is clear, easy to use and scalable due to target group of devices. In current times almost everybody has mobile device that can be connected to the Internet. Because of usually they are personal, user can enter the mobile website and search for information anonymously. Moreover, interface is also designed for people looking for information about help for their friends or family. The only action that user is expected to do is describe nature of the problem - drug types are automatically recognized from the input. There are no hidden functions or options and all actions are visible for the user (e.g. when PDF file is ready to download). Also to receive answer for the request, no contact information are needed. User can retrieve file directly from server and in addition helpline numbers are displayed. There is no interaction with user's file system - all files can be downloaded only if users will accept it. 
+Our idea was to create mobile version of the website that contains the same functionality and similar layout. Used colors of the mobile interface are the same as web interface - they are toned to give the impression of serenity - no sharp or drawing attention ones. Moreover website does not contain any special graphical effects, transitions or even advertisements in order to minimize response time and avoid possibility of lack of support. All visual effects are using browser's native functions, which also makes it compatible with every mobile device. All width and height values in Mobile Interface are given using percentages, which makes website scalable for all types of mobile devices. User experience should be the same on all types of screens and platforms. 
+
+
+\subsection*{Technical choices}
+
+Mobile User Interface have been developed in Bluefish editor with HTML5, JavaScript, jQuery and CSS3. These languages used together are powerful tool for creating websites that can act like native applications. The reason behind using this technology is compatibility with great amount of mobile devices and all mobile platforms, so with our application we can gain huge group of users. Moreover, developing application in this environment is quick and easy, and decreases time to release to market, because there is no need to implement native apps. This solution is also the cheapest one (considering costs of development) and fastest, because there is no need to place application in app store. Also it gives good opportunity to make quick updates, which are visible for everyone (in contrast to the app stores, where updates must be posted, accepted and installed by the users).  
+Core of the website is based on HTML5 DOM.  JavaScript with jQuery library handles displaying DOM objects on the website and process request to server. Layout is written in CSS3, which enables developers to change it, whenever they want - e.g. colors or fonts may depend on the device or operating system. Another reason of this choice is no need to use external plugins to display interface. It decreases loading time and amount of used resources.
+
+
+\subsection*{Outcomes}
+
+Mobile Interface is designed for users that don't want to install any application and want to use it in any place on their small devices. Mobile Interface is equivalent of the web interface. It also provides simple interaction with minimum demanded steps to receive answer (it may be helpful in emergency situations). Main target was to create responsive website that is simple, clear and easy to use for everyone, and almost on any mobile device.
 
 %%%%%%%%%%%%%%%%%%%% DESKTOP %%%%%%%%%%%%%%%%%%%%%
 
@@ -158,10 +187,12 @@ The CLI offers a drastically simpler way to consider the interface of the Anonym
 
 %%%%%%%%%%%%%%%%%%% CONCLUSION %%%%%%%%%%%%%%%%%%%
 \section*{Conclusion}
-Todo
+For an application of this kind - very simple and anonymous - there is no need to fancy functionalities. That is why a desktop application is not really appropriate. Eventually, the website would be the optimal way to  present a drug abuse information service, because it can work everywhere on every device, and its responsiveness is adapted for smaller screens as well as bigger screens.
 
 
 %%%%%%%%%%%%%%%%%%% APPENDICES %%%%%%%%%%%%%%%%%%%
+\clearpage
+\newpage
 
 \section*{Appendices}
 
@@ -172,32 +203,64 @@ Todo
 
 \subsection{Web interface screenshots}
 
+\begin{center}
+\includegraphics[width=0.4\textwidth]{images/WebHomeScreen.png}
+\label{web_home}
+~\\~\\
+
+\includegraphics[width=0.4\textwidth]{images/WebProblemDescription.png}
+\label{web_problem}
+~\\~\\
+
+\includegraphics[width=0.4\textwidth]{images/WebProblemSolution.png}
+\label{web_solution}
+
+\end{center}
+
 %%%%%% MOBILE %%%%%
 
 \subsection{Mobile interface screenshots}
+\begin{center}
+
+\includegraphics[width=0.25\textwidth]{images/MobileHomeScreen1.PNG}
+\label{mobile1}
+~\\~\\
+
+\includegraphics[width=0.25\textwidth]{images/MobileHomeScreen2.png}
+\label{mobile2}
+~\\~\\
+
+\includegraphics[width=0.25\textwidth]{images/MobileProblemDescription.png}
+\label{mobile3}
+~\\~\\
+
+\includegraphics[width=0.25\textwidth]{images/MobileProblemSolution.png}
+\label{mobile4}
+
+\end{center}
 
 %%%%% DESKTOP %%%%%
 
 \subsection{Desktop interface screenshots}
 
 \begin{center}
-\includegraphics[width=0.35\textwidth]{images/desktop_screen_home.png}
+\includegraphics[width=0.4\textwidth]{images/desktop_screen_home.png}
 \label{desktop_home}
 ~\\~\\
 
-\includegraphics[width=0.35\textwidth]{images/desktop_screen_home_dl.png}
+\includegraphics[width=0.4\textwidth]{images/desktop_screen_home_dl.png}
 \label{desktop_dl}
 ~\\~\\
 
-\includegraphics[width=0.35\textwidth]{images/desktop_screen_previous.png}
+\includegraphics[width=0.4\textwidth]{images/desktop_screen_previous.png}
 \label{desktop_previous}
 ~\\~\\
 
-\includegraphics[width=0.35\textwidth]{images/desktop_screen_phone.png}
+\includegraphics[width=0.4\textwidth]{images/desktop_screen_phone.png}
 \label{desktop_phone}
 ~\\~\\
 
-\includegraphics[width=0.35\textwidth]{images/desktop_screen_about.png}
+\includegraphics[width=0.4\textwidth]{images/desktop_screen_about.png}
 \label{desktop_about}
 \end{center}
 
@@ -216,7 +279,8 @@ Todo
 
 
 %%%%%%%%%%%%%%%%%% BIBLIOGRAPHY %%%%%%%%%%%%%%%%%%
-
+\clearpage
+\newpage
 \begin{thebibliography}{9}
 
 \bibitem{shneiderman05}
